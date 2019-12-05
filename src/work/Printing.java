@@ -45,8 +45,14 @@ public class Printing {
 		for (Integer i : numbers) {
 			squareList.add(i*i);
 		}
-	
+		List <Integer> minSquareList = new ArrayList <>();
+		for (Integer i : squareList) {
+			if ( i%2 == 0) {
+				minSquareList.add(i);
+			}
 		
+		}
+		System.out.println("The minimum even squared value: " +Collections.min(minSquareList));	
 		System.out.println();
 
 		numbers.stream().reduce((number1, number2) -> Math.max(number1, number2)).get();
